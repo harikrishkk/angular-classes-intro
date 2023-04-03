@@ -22,4 +22,7 @@
 - property & event binding
 - ngClass, ngStyle, ngModel 
 - looping collections with *ngFor
-- 
+  
+### Install bootstrap
+
+`npm i bootstrap`
