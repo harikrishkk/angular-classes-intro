@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
+  banner = {
+    heading: "Spring season is back!",
+    subHeading: "And so is our offers too. So why waiting?",
+    cta: "Check out all Products",
+    url: "https://www.amazon.ca/"
+  }
 
+  handleClick() {
+    console.log("clicked the button")
+  }
 }

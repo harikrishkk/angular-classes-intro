@@ -30,3 +30,10 @@
 Starting code example [here](https://startbootstrap.com/previews/heroic-features)
 
 
+### Banner component 
+
+- Added a component
+- Interpolation
+- Property binding
+- Event binding 
+- 2 way binding ( to check )
