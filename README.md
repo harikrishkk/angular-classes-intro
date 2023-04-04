@@ -51,3 +51,9 @@ npm install @fortawesome/free-solid-svg-icons
 # See Compatibility table below to choose a correct version
 npm install @fortawesome/angular-fontawesome@<version>
 ```
+
+### Typescript issue
+
+[Here](https://stackoverflow.com/questions/63126067/class-is-using-angular-features-but-is-not-decorated-please-add-an-explicit-ang)
+
+[Here](https://github.com/angular/vscode-ng-language-service/issues/1746)
