@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ContactComponent } from './pages/contact/contact.component'
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     RatingComponent,
     HomeComponent,
     ProductsComponent,
-    ContactComponent
+    ContactComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

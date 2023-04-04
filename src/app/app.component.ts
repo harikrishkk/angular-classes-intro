@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faDumpster } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,4 @@ import { faDumpster } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title: string = 'humber-demo';
-  faDumpster = faDumpster;
-
 }
