@@ -22,4 +22,29 @@ export class ProductsService {
       })
     )
   }
+
+  getAllProductsByCategories(): Observable<any> {
+    return this.http.get('https://humber-demo-default-rtdb.firebaseio.com/products.json').pipe(
+      map(responseObj => {
+        const obj = {} as any;
+        const categories: string[] = [];
+        const objResponse = responseObj as Card[];
+
+        for (let item in objResponse) {
+          if (categories.indexOf(objResponse[item].category) === -1) {
+            categories.push(objResponse[item].category)
+          }
+        }
+        categories.forEach(cat => {
+          obj[cat] = [];
+          for (let item in objResponse) {
+            if (objResponse[item].category === cat) {
+              obj[cat].push({ ...objResponse[item], id: item })
+            }
+          }
+        })
+        return obj;
+      })
+    )
+  }
 }
