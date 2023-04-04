@@ -7,6 +7,7 @@ import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { StockPipe } from './pipes/stock/stock.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RatingComponent } from './components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BannerComponent,
     CardComponent,
     FooterComponent,
-    StockPipe
+    StockPipe,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
