@@ -12,14 +12,13 @@ import { ProductsService } from './services/products.service';
 export class AppComponent implements OnInit {
   title: string = 'humber-demo';
   faDumpster = faDumpster;
-  cards!: Observable<Card[]>;
+  cards$!: Observable<Card[]>;
 
   constructor(private productService: ProductsService) {
   }
 
   ngOnInit(): void {
-    // this.cards = this.productService.getCardData();
-    this.productService.getCardData();
+    this.cards$ = this.productService.getCardData();
   }
 
   handleCardSelect(card: any) {

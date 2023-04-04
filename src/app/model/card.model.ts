@@ -1,7 +1,7 @@
 export interface Card {
   id: string | number;
-  header: string;
-  subHeader: string;
+  title: string;
+  description: string;
   price: number;
   rating: number;
   stock: number;
