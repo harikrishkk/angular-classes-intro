@@ -38,3 +38,16 @@ Starting code example [here](https://startbootstrap.com/previews/heroic-features
 - Event binding 
 - 2 way binding ( to check )
 - Reference for dummy data [here](https://dummyjson.com/products)
+
+### Font icons
+
+- [Font awesome](https://github.com/FortAwesome/angular-fontawesome)
+- Documentation [here](https://www.npmjs.com/package/@fortawesome/angular-fontawesome)
+
+```
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+
+# See Compatibility table below to choose a correct version
+npm install @fortawesome/angular-fontawesome@<version>
+```
