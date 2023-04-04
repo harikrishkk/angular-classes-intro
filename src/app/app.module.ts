@@ -13,6 +13,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ContactComponent } from './pages/contact/contact.component'
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     ProductsComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
