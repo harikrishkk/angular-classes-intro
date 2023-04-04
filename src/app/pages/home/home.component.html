@@ -1,0 +1,11 @@
+<app-banner></app-banner>
+
+<section class="pt-4">
+  <div class="container px-lg-5">
+    <div *ngIf="(cards$ | async) as cards" class="row gx-lg-5">
+      <div *ngFor="let card of cards" class="col-lg-6 col-xxl-4 mb-5">
+        <app-card [card]="card" (onCardSelect)="handleCardSelect($event)"></app-card>
+      </div>
+    </div>
+  </div>
+</section>
