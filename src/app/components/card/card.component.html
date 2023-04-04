@@ -13,6 +13,7 @@
   </ul>
   <div class="card-body">
     <a href="#" class="btn btn-dark">More Info</a>
-    <button (click)="onSelect()" class="ms-3 btn btn-primary">Add to cart</button>
+    <button [disabled]="isDisabled" (click)="onSelect()"
+      [ngClass]="{'btn-primary': !isDisabled, 'btn-secondary': isDisabled}" class="ms-3 btn">Add to cart</button>
   </div>
 </div>

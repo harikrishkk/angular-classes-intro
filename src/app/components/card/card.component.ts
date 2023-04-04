@@ -10,6 +10,10 @@ export class CardComponent {
   @Input() card!: Card;
   @Output() onCardSelect = new EventEmitter<Card>()
 
+  get isDisabled() {
+    return this.card.stock === 0
+  }
+
   onSelect() {
     this.onCardSelect.emit(this.card);
   }
