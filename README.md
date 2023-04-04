@@ -37,3 +37,4 @@ Starting code example [here](https://startbootstrap.com/previews/heroic-features
 - Property binding
 - Event binding 
 - 2 way binding ( to check )
+- Reference for dummy data [here](https://dummyjson.com/products)

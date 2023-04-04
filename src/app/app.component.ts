@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { cardData } from './components/card/card.data';
+import { Card } from './model/card.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'humber-demo';
+  title: string = 'humber-demo';
+  cards: Card[] = cardData;
+
+  handleCardSelect(card: any) {
+    console.log("Selected", card)
+  }
 }
