@@ -57,3 +57,12 @@ npm install @fortawesome/angular-fontawesome@<version>
 [Here](https://stackoverflow.com/questions/63126067/class-is-using-angular-features-but-is-not-decorated-please-add-an-explicit-ang)
 
 [Here](https://github.com/angular/vscode-ng-language-service/issues/1746)
+
+### Firebase DB 
+
+Signup and create a real time database with Test mode.
+Insomnia or POSTMAN to update data
+
+```
+https://humber-demo-default-rtdb.firebaseio.com/products.json
+```

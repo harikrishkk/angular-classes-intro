@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faDumpster } from '@fortawesome/free-solid-svg-icons';
+import { Observable } from 'rxjs';
 import { Card } from './model/card.model';
 import { ProductsService } from './services/products.service';
 
@@ -11,13 +12,14 @@ import { ProductsService } from './services/products.service';
 export class AppComponent implements OnInit {
   title: string = 'humber-demo';
   faDumpster = faDumpster;
-  cards: Card[] = [];
+  cards!: Observable<Card[]>;
 
   constructor(private productService: ProductsService) {
   }
 
   ngOnInit(): void {
-    this.cards = this.productService.getCardData();
+    // this.cards = this.productService.getCardData();
+    this.productService.getCardData();
   }
 
   handleCardSelect(card: any) {

@@ -1,16 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { cardData } from '../components/card/card.data';
-// Try removing the providedIn root and see what happens
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  private cardData = cardData;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getCardData() {
-    return this.cardData;
+    return this.http.get('https://humber-demo-default-rtdb.firebaseio.com/products.json').subscribe(
+      data => console.log(data)
+    )
   }
 }
