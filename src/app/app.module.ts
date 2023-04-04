@@ -14,6 +14,7 @@ import { ContactComponent } from './pages/contact/contact.component'
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     ProductsComponent,
     ContactComponent,
     NavbarComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
