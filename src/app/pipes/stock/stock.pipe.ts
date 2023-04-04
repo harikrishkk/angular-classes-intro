@@ -9,6 +9,9 @@ export class StockPipe implements PipeTransform {
     if (value && typeof value === 'number' && value < 10) {
       return "Last 10 items in stock!"
     }
+    if (value === 0) {
+      return "Out of stock!"
+    }
     return value;
   }
 
