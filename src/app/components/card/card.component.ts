@@ -8,7 +8,11 @@ import { Card } from 'src/app/model/card.model';
 })
 export class CardComponent {
   @Input() card!: Card;
-  @Output() onCardSelect = new EventEmitter<Card>()
+  @Output() onCardSelect = new EventEmitter<Card>();
+
+  trimText(text: string) {
+    return text.substring(0, 80) + "...";
+  }
 
   get isDisabled() {
     return this.card.stock === 0

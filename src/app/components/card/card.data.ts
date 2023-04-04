@@ -62,7 +62,7 @@ export const cardData: Card[] = [
     subHeader: 'MacBook Pro 2021 with mini-LED display may launch between September, November',
     price: 1749,
     rating: 5,
-    stock: 83,
+    stock: 7,
     brand: 'Apple',
     category: 'Laptops',
     thumbnail: "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
