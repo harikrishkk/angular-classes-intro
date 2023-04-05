@@ -47,4 +47,9 @@ export class ProductsService {
       })
     )
   }
+
+  getAProductById(id: string) {
+    return this.http.get(`https://humber-demo-default-rtdb.firebaseio.com/products/${id
+      }.json`)
+  }
 }

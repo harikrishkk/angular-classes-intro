@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { GalleryModule } from 'ng-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GalleryModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
