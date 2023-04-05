@@ -17,6 +17,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HoverDirective } from './directives/hover.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     NavbarComponent,
     ProductDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    StockPipe
+    StockPipe,
+    HoverDirective
   ]
 })
 export class AppModule { }
