@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Card } from 'src/app/model/card.model';
+import { CartService } from 'src/app/services/cart.service';
 import { ProductsService } from 'src/app/services/products.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { ProductsService } from 'src/app/services/products.service';
 export class HomeComponent implements OnInit {
   cards$!: Observable<Card[]>;
 
-  constructor(private productService: ProductsService) {
+  constructor(private productService: ProductsService, private cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -19,6 +20,6 @@ export class HomeComponent implements OnInit {
   }
 
   handleCardSelect(card: any) {
-    console.log("Selected", card)
+    this.cartService.addItemsToCart(card);
   }
 }
