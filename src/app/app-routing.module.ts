@@ -7,12 +7,13 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'products/new', component: AddProductComponent },
+  { path: 'products/new', component: AddProductComponent, canActivate: [AuthGuard] },
   { path: 'products/:id', component: ProductDetailComponent },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
