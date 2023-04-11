@@ -19,7 +19,7 @@ import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HoverDirective } from './directives/hover.directive';
 import { AddProductComponent } from './pages/add-product/add-product.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
@@ -47,7 +47,8 @@ import { LoginComponent } from './pages/login/login.component';
     AppRoutingModule,
     GalleryModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
