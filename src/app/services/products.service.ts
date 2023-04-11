@@ -52,4 +52,9 @@ export class ProductsService {
     return this.http.get(`https://humber-demo-default-rtdb.firebaseio.com/products/${id
       }.json`)
   }
+
+  addNewProduct(product: any): Observable<any> {
+    console.log("Sending:", product)
+    return this.http.post(`https://humber-demo-default-rtdb.firebaseio.com/products.json`, product)
+  }
 }
