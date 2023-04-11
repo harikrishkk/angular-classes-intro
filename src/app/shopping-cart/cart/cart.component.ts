@@ -28,5 +28,17 @@ export class CartComponent {
     )
   }
 
+  addItem(id: string) {
+    this.cartService.addQuantity(id);
+  }
+
+  decrementItem(id: string) {
+    this.cartService.removeQuantity(id);
+  }
+
+  deleteItem(id: string) {
+    this.cartService.deleteItem(id);
+  }
+
 
 }

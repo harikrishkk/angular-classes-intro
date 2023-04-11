@@ -15,13 +15,18 @@ export class CartService {
     return this.cartItems.asObservable();
   }
 
+  addQuantity(id: string) {
+    this.addMoreQuantity(id)
+  }
 
+  removeQuantity(id: string) {
+    this.removeMoreQuantity(id);
+  }
 
   addItemsToCart(item: any) {
     const isAddedIndex = this.cartArr.findIndex(cartItem => cartItem.id === item.id);
 
     if (isAddedIndex === -1) {
-
       let cart = {
         id: item.id,
         quantity: 1,
@@ -33,10 +38,43 @@ export class CartService {
       this.cartItems.next(this.cartArr);
     }
     else {
-      let cart = this.cartArr.map(cartItem => {
-        return cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
-      })
-      this.cartItems.next(cart);
+      this.addMoreQuantity(item.id)
     }
   }
+
+  private addMoreQuantity(id: string) {
+    let cart = this.cartArr.map(cartItem => {
+      return cartItem.id === id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+    })
+
+    this.cartArr = [...cart];
+    this.cartItems.next(cart);
+  }
+
+  private removeMoreQuantity(id: string) {
+
+    const itemToRemove = this.cartArr.find(item => item.id === id);
+
+    if (itemToRemove.quantity > 1) {
+      itemToRemove.quantity = itemToRemove.quantity - 1;
+      const cart = this.cartArr.map(item => {
+        return item.id === id ? itemToRemove : item
+      })
+      this.cartArr = [...cart]
+      this.cartItems.next(cart);
+      return;
+    }
+
+    if (itemToRemove.quantity === 1) {
+      this.deleteItem(id);
+    }
+
+  }
+
+  deleteItem(id: string) {
+    const cart = this.cartArr.filter(item => item.id !== id);
+    this.cartArr = [...cart]
+    this.cartItems.next(cart);
+  }
+
 }
