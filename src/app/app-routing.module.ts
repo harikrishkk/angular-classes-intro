@@ -6,6 +6,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/new', component: AddProductComponent },
   { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
