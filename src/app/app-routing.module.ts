@@ -15,6 +15,7 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/new', component: AddProductComponent, canActivate: [AuthGuard] },
   { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'cart', loadChildren: () => import('./shopping-cart/shopping-cart.module').then(m => m.ShoppingCartModule) },
   { path: 'login', component: LoginComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: PageNotFoundComponent },
