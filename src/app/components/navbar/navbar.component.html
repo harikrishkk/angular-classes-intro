@@ -16,7 +16,15 @@
         <li class="nav-item"><a routerLink="/products" routerLinkActive="active" class="nav-link">Products</a>
         </li>
         <li class="nav-item"><a routerLink="/products/new" routerLinkActive="active" class="nav-link">Add New</a></li>
-        <li class="nav-item"><a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a></li>
+
+        <div *ngIf="(currentLoginStatus$ | async ) as currentLogin; else loginTemplate">
+          <li (click)="logout()" class="nav-item"><a class="nav-link">Logout</a></li>
+        </div>
+
+        <ng-template #loginTemplate>
+          <li class="nav-item"><a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a></li>
+        </ng-template>
+
         <li class="nav-item"><a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a></li>
       </ul>
     </div>

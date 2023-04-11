@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { filter, tap } from 'rxjs';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +11,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
+
+  constructor(private loginService: LoginService, private router: Router) {
+  }
 
   get userEmail() {
     return this.loginForm.get('email');
@@ -30,9 +36,14 @@ export class LoginComponent implements OnInit {
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)])
     })
+    this.loginService.currentLoginStatus$.pipe(
+      filter(status => !!status),
+      tap(() => this.router.navigateByUrl('/'))
+    ).subscribe();
   }
   onSubmit() {
-    console.log(this.loginForm)
+    const { email, password } = this.loginForm.value;
+    this.loginService.userLogin(email, password);
   }
 
 }
