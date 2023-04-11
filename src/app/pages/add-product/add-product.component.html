@@ -1,24 +1,24 @@
 <div class="container mt-4">
   <h1 class="mb-4"> Add New Product</h1>
-  <form>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
     <div class="mb-3">
       <label class="form-label">Product Title</label>
-      <input type="text" class="form-control" placeholder="Product Title">
+      <input name="title" ngModel type="text" class="form-control" placeholder="Product Title">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Product Description</label>
-      <input type="text" class="form-control" placeholder="Product Description">
+      <input name="description" ngModel type="text" class="form-control" placeholder="Product Description">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Brand</label>
-      <input type="text" class="form-control" placeholder="Brand">
+      <input name="brand" ngModel type="text" class="form-control" placeholder="Brand">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Category</label>
-      <select class="form-select">
+      <select name="category" ngModel class="form-select">
         <option selected>Select</option>
         <option value="smartphones">Smartphones</option>
         <option value="laptops">laptops</option>
@@ -27,32 +27,34 @@
 
     <div class="mb-3">
       <label class="form-label">Discount in %</label>
-      <input type="number" class="form-control" placeholder="Discount">
+      <input name="discount" ngModel type="number" class="form-control" placeholder="Discount">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Thumbnail</label>
-      <input type="text" class="form-control" placeholder="Thumbnail">
+      <input name="thumbnail" ngModel type="text" class="form-control" placeholder="Thumbnail">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Price</label>
-      <input type="number" class="form-control" placeholder="Price">
+      <input name="price" ngModel type="number" class="form-control" placeholder="Price">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Rating</label>
-      <input type="number" class="form-control" placeholder="Rating">
+      <input name="rating" ngModel type="number" class="form-control" placeholder="Rating">
     </div>
 
     <div class="mb-3">
       <label class="form-label">Stock</label>
-      <input type="number" class="form-control" placeholder="Stock">
+      <input name="stock" ngModel type="number" class="form-control" placeholder="Stock">
     </div>
 
     <div class="mb-3">
       <button type="submit" class="btn btn-primary mb-3">Add New Item</button>
     </div>
+
+    <pre> {{ f.value | json }}</pre>
 
   </form>
 </div>

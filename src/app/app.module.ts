@@ -19,6 +19,7 @@ import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HoverDirective } from './directives/hover.directive';
 import { AddProductComponent } from './pages/add-product/add-product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AddProductComponent } from './pages/add-product/add-product.component';
     HttpClientModule,
     AppRoutingModule,
     GalleryModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
