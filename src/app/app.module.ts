@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HoverDirective } from './directives/hover.directive';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HoverDirective } from './directives/hover.directive';
     NavbarComponent,
     ProductDetailComponent,
     PageNotFoundComponent,
-    HoverDirective
+    HoverDirective,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
