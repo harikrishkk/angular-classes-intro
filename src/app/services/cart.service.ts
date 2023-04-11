@@ -15,6 +15,8 @@ export class CartService {
     return this.cartItems.asObservable();
   }
 
+
+
   addItemsToCart(item: any) {
     const isAddedIndex = this.cartArr.findIndex(cartItem => cartItem.id === item.id);
 
@@ -24,7 +26,8 @@ export class CartService {
         id: item.id,
         quantity: 1,
         price: item.price,
-        productName: item.title
+        productName: item.title,
+        thumbnail: item.thumbnail
       }
       this.cartArr.push(cart);
       this.cartItems.next(this.cartArr);
