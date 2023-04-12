@@ -66,3 +66,7 @@ Insomnia or POSTMAN to update data
 ```
 https://humber-demo-default-rtdb.firebaseio.com/products.json
 ```
+
+### Deployed
+
+[Live demo](https://angular-classes-intro.vercel.app/)
