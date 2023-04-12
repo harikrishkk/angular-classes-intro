@@ -11,11 +11,16 @@ import { LoginService } from 'src/app/services/login.service';
 export class NavbarComponent implements OnInit {
   faDumpster = faDumpster;
   currentLoginStatus$!: Observable<boolean>;
+  isOpen = false;
   constructor(private loginService: LoginService) {
   }
 
   ngOnInit() {
     this.currentLoginStatus$ = this.loginService.currentLoginStatus$;
+  }
+
+  handleToggle() {
+    this.isOpen = !this.isOpen;
   }
 
   logout() {
