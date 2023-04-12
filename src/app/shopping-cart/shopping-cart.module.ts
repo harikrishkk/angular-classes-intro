@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ShoppingCartRoutingModule } from './shopping-cart.routing.module';
 import { CartComponent } from './cart/cart.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CartItemComponent } from './cart-item/cart-item.component';
 
 @NgModule({
-  declarations: [CartComponent],
+  declarations: [CartComponent, CartItemComponent],
   imports: [
     CommonModule,
     ShoppingCartRoutingModule,
