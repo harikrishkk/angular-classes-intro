@@ -17,10 +17,10 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HoverDirective } from './directives/hover.directive';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,6 @@ import { LoginComponent } from './pages/login/login.component';
     NavbarComponent,
     ProductDetailComponent,
     PageNotFoundComponent,
-    HoverDirective,
     AddProductComponent,
     LoginComponent
   ],
@@ -48,13 +47,13 @@ import { LoginComponent } from './pages/login/login.component';
     GalleryModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    StockPipe,
-    HoverDirective
+    StockPipe
   ]
 })
 export class AppModule { }
