@@ -12,6 +12,7 @@ export class CartComponent {
   cartTotal$!: Observable<number>;
 
   constructor(private cartService: CartService) {
+
   }
 
   ngOnInit() {
